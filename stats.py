@@ -10,3 +10,12 @@ def count_characters(text):
         counts[c] += 1
     return counts
 
+def sort_key(d):
+    return d["count"]
+
+def sort_characters_by_counts(counts):
+    l = []
+    for char in counts:
+        l.append({"char": char, "count": counts[char]})
+    l.sort(reverse=True, key=sort_key)
+    return l
