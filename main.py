@@ -28,11 +28,14 @@ def main():
     sorted_counts = sort_characters_by_counts(character_counts)
     #print(sorted_counts)
 
+    print("--------- Character Count -------")
+
     for count in sorted_counts:
         char = count["char"]
         how_many = count["count"]
         if char.isalpha():
             print(f"{char}: {how_many}")
+
     print("============= END ===============")
 
 
